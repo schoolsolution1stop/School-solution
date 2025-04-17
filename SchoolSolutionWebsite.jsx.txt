@@ -1,0 +1,106 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { BookOpen, Pencil, FlaskConical, Stethoscope, Football } from "lucide-react";
+
+export default function SchoolSolutionWebsite() {
+  return (
+    <div className="bg-yellow-50 min-h-screen text-gray-800 font-sans">
+      <header className="bg-yellow-300 p-6 shadow-md">
+        <h1 className="text-4xl font-bold text-center text-gray-900">School Solution</h1>
+        <p className="text-center text-lg">Your One-Stop Shop for All School Essentials</p>
+      </header>
+
+      <nav className="flex justify-center gap-4 bg-yellow-200 p-4 shadow-inner">
+        <a href="#about" className="hover:underline">About Us</a>
+        <a href="#products" className="hover:underline">Products</a>
+        <a href="#why" className="hover:underline">Why Choose Us</a>
+        <a href="#contact" className="hover:underline">Contact</a>
+        <a href="#quote" className="hover:underline">Request a Quote</a>
+      </nav>
+
+      <section className="text-center py-10 px-4" id="about">
+        <h2 className="text-3xl font-bold mb-4">About Us</h2>
+        <p>
+          School Solution provides all kinds of educational supplies—from books and stationery to
+          sports gear, lab equipment, and hygiene products. We aim to make school procurement
+          simple, reliable, and affordable.
+        </p>
+      </section>
+
+      <section className="py-10 px-4 bg-white" id="products">
+        <h2 className="text-3xl font-bold text-center mb-8">Our Products</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Card>
+            <CardContent className="p-4 flex flex-col items-center text-center">
+              <BookOpen className="w-10 h-10 text-blue-500 mb-2" />
+              <h3 className="font-bold">Books</h3>
+              <p>Textbooks, workbooks, and reference materials for all grades.</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4 flex flex-col items-center text-center">
+              <Pencil className="w-10 h-10 text-pink-500 mb-2" />
+              <h3 className="font-bold">Stationery</h3>
+              <p>Everything from pens and notebooks to art supplies and folders.</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4 flex flex-col items-center text-center">
+              <Football className="w-10 h-10 text-green-500 mb-2" />
+              <h3 className="font-bold">Sports Goods</h3>
+              <p>Cricket sets, footballs, and other PE essentials.</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4 flex flex-col items-center text-center">
+              <FlaskConical className="w-10 h-10 text-purple-500 mb-2" />
+              <h3 className="font-bold">Lab Equipment</h3>
+              <p>Beakers, test tubes, models, and scientific tools for experiments.</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4 flex flex-col items-center text-center">
+              <Stethoscope className="w-10 h-10 text-red-500 mb-2" />
+              <h3 className="font-bold">Health & Hygiene</h3>
+              <p>Sanitizers, tissues, first aid kits, and more to keep schools safe.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-10 px-4" id="why">
+        <h2 className="text-3xl font-bold text-center mb-4">Why Choose School Solution?</h2>
+        <ul className="list-disc max-w-xl mx-auto mt-4">
+          <li>Wide variety of high-quality products</li>
+          <li>Reliable and timely deliveries</li>
+          <li>Bulk order discounts</li>
+          <li>Friendly customer support</li>
+        </ul>
+      </section>
+
+      <section className="py-10 px-4 bg-white" id="contact">
+        <h2 className="text-3xl font-bold text-center mb-4">Contact Us</h2>
+        <div className="text-center">
+          <p>Email: info@schoolsolution.com</p>
+          <p>Phone: +91 98765 43210</p>
+          <p>Address: 123 Education Lane, Cityname</p>
+        </div>
+      </section>
+
+      <section className="py-10 px-4" id="quote">
+        <h2 className="text-3xl font-bold text-center mb-4">Request a Quote</h2>
+        <form className="max-w-md mx-auto flex flex-col gap-4">
+          <input type="text" placeholder="School Name" className="p-2 border rounded" />
+          <input type="email" placeholder="Email Address" className="p-2 border rounded" />
+          <textarea placeholder="Your Requirements" rows={4} className="p-2 border rounded"></textarea>
+          <Button type="submit" className="bg-yellow-300 hover:bg-yellow-400">Send Request</Button>
+        </form>
+      </section>
+
+      <footer className="text-center p-4 bg-yellow-200 mt-6">
+        &copy; {new Date().getFullYear()} School Solution. All rights reserved.
+      </footer>
+    </div>
+  );
+}
